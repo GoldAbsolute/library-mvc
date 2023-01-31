@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "705ceb65-7afb-453a-8305-03c7da7a60e9",
+		"name": "mvc-api-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18656618"
+	},
+	"item": [
+		{
+			"name": "Получение всех книг",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://library-mvc",
+					"protocol": "http",
+					"host": [
+						"library-mvc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение книги по одному параметру",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://library-mvc/?author=Станислав Лем",
+					"protocol": "http",
+					"host": [
+						"library-mvc"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "Станислав Лем"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение книги по двум параметрам",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://library-mvc?author=Станислав Лем&title=Солярис",
+					"protocol": "http",
+					"host": [
+						"library-mvc"
+					],
+					"query": [
+						{
+							"key": "author",
+							"value": "Станислав Лем"
+						},
+						{
+							"key": "title",
+							"value": "Солярис"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавление записи в таблицу",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "author",
+							"value": "Станислав Лем",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "Солярис",
+							"type": "text"
+						},
+						{
+							"key": "year",
+							"value": "1960",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://library-mvc",
+					"protocol": "http",
+					"host": [
+						"library-mvc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Изменение данных о книге",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://library-mvc?id=1&author=Дуглас Адамс&title=Автостопом по Галактике&year=1979",
+					"protocol": "http",
+					"host": [
+						"library-mvc"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "author",
+							"value": "Дуглас Адамс"
+						},
+						{
+							"key": "title",
+							"value": "Автостопом по Галактике"
+						},
+						{
+							"key": "year",
+							"value": "1979"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удаление книги",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://library-mvc?id=1",
+					"protocol": "http",
+					"host": [
+						"library-mvc"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
